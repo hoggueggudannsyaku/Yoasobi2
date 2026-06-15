@@ -764,6 +764,7 @@ GameObject:
   - component: {fileID: 1291762847}
   - component: {fileID: 1291762846}
   - component: {fileID: 1291762851}
+  - component: {fileID: 1291762852}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -796,7 +797,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &1291762847
 CapsuleCollider:
@@ -902,7 +903,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1556f9230ff6dd247acb525735fa7fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
+--- !u!114 &1291762852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291762845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844f3e1377bc03f4ea8cb6cd4368b4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayDistance: 1
 --- !u!1 &1384193210
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +931,7 @@ GameObject:
   - component: {fileID: 1384193212}
   - component: {fileID: 1384193211}
   - component: {fileID: 1384193216}
+  - component: {fileID: 1384193217}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1050,13 +1065,13 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384193210}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1372625422
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1064,6 +1079,19 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1384193217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384193210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a945fcf5d822634581944534fd518bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_transform: {fileID: 1291762850}
 --- !u!1 &1537085549
 GameObject:
   m_ObjectHideFlags: 0
