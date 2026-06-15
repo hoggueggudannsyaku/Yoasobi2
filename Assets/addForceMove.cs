@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MoveByForce : MonoBehaviour
+public class addForceMove : MonoBehaviour
 {
     public float speed = 5f; // 加える力の大きさ
     Rigidbody rb;
