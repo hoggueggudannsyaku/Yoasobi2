@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class AINavMeshEnemy : MonoBehaviour
 {
+    [SerializeField]private GameObject SoundWander;
     [SerializeField]private Transform player_transform;
     [SerializeField]private Transform wander_transform;
     public bool playermiss;
@@ -60,6 +61,8 @@ public class AINavMeshEnemy : MonoBehaviour
     }
     private void SeachMode()
     {
-        
+        agent.SetDestination(SoundWander.transform.position);
+        if(SoundWander.transform.position == this.gameObject.transform.position)
+        NowMode = Mode.Idle;    
     }
 }
